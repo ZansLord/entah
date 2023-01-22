@@ -10,8 +10,10 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN npm install
+RUN npm install && npm install qrcode-terminal
 
 COPY . .
 
-CMD ["npm", "start"]
+EXPOSE 5000
+
+CMD ["node", "Nandita.js"]
